@@ -8,7 +8,9 @@ The CURE algorithm stands as a beacon of adaptability and precision in the vast 
 
 Calculates the minimum distance from a given point to any of the representative points of a cluster.
 
-    def getDistanceFromRepresentatives(point, representativePoints_shifted): minimumDistance = float("inf") for repr_point in representativePoints_shifted: distance = getDistance(point, repr_point) if distance < minimumDistance: minimumDistance = distance return minimumDistance
+```
+def getDistanceFromRepresentatives(point, representativePoints_shifted): minimumDistance = float("inf") for repr_point in representativePoints_shifted: distance = getDistance(point, repr_point) if distance < minimumDistance: minimumDistance = distance return minimumDistance
+```
 
 Purpose: This function helps in assigning a point to the nearest cluster based on the shifted representative points.
 
