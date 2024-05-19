@@ -100,12 +100,12 @@ Uses matplotlib to create a scatter plot of the points colored by their assigned
 
 # Overview of the CURE Algorithm Implementation
 
-**Sampling:** Initially, a sample of the data is used to create clusters.
-**Hierarchical Clustering:** The sample data undergoes hierarchical clustering to form k clusters.
-**Representative Points:** For each cluster, n representative points are chosen that best capture the geometry of the cluster.
-**Point Shifting:** These representative points are then shifted towards the cluster's centroid by a fraction p to reduce the effect of outliers.
-**Assigning Clusters:** Each point in the complete dataset is assigned to the nearest cluster based on the minimum distance to the shifted representative points.
-**Visualization:** Finally, the clustered points are plotted using different colors to visualize the clustering results.
+1. **Sampling:** Initially, a sample of the data is used to create clusters.
+2. **Hierarchical Clustering:** The sample data undergoes hierarchical clustering to form k clusters.
+3. **Representative Points:** For each cluster, n representative points are chosen that best capture the geometry of the cluster.
+4. **Point Shifting:** These representative points are then shifted towards the cluster's centroid by a fraction p to reduce the effect of outliers.
+5. **Assigning Clusters:** Each point in the complete dataset is assigned to the nearest cluster based on the minimum distance to the shifted representative points.
+6. **Visualization:** Finally, the clustered points are plotted using different colors to visualize the clustering results.
 
 # HOW TO RUN:
 
