@@ -110,15 +110,30 @@ Uses matplotlib to create a scatter plot of the points colored by their assigned
 # HOW TO RUN:
 
 1. Clone the repo
+
+```
    git clone https://github.com/your_username/your_project.git
    cd your_project
+```
+
 2. Install pandas and matplotlib
+
+```
    pip install pandas
    pip install matplotlib
+```
+
 3. Ensure you have complete_data.csv file containing your complete data. Run the script to generate sample_data.csv:
+
+```
    python generate_sample_data.py
+```
+
 4. Open the cure_algorithm_with_plots.py script and update the parameters as needed (e.g., number of clusters, sample size). Run the script:
+
+```
    python cure_algorithm_with_plots.py sample_data.csv complete_data.csv 3 5 0.2 output.csv
-   Replace sample_data.csv, complete_data.csv, and output.csv with your actual file names.
-   Adjust the parameters (3, 5, 0.2) according to your requirements.
-5. After running the script, two plots will be displayed: one showing the initial clusters and the other showing the final clusters.
+```
+
+Replace sample_data.csv, complete_data.csv, and output.csv with your actual file names.
+Adjust the parameters (3, 5, 0.2) according to your requirements. 5. After running the script, two plots will be displayed: one showing the initial clusters and the other showing the final clusters.
