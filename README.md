@@ -116,11 +116,12 @@ Uses matplotlib to create a scatter plot of the points colored by their assigned
    cd ObesityClassifierUsingCUREAlgorithm
 ```
 
-2. Install pandas and matplotlib
+2. Install pandas, matplotlib and scikit-learn for k-means clustring in compare_clusters.py
 
 ```
    pip install pandas
    pip install matplotlib
+   pip install scikit-learn
 ```
 
 3. Ensure you have complete_data.csv file containing your complete data. Run the script to generate sample_data.csv:
@@ -136,4 +137,11 @@ Uses matplotlib to create a scatter plot of the points colored by their assigned
    python Clustering_CURE.py sample_data.csv complete_data.csv 3 5 0.2 output.csv
 ```
 
-5. After running the script, two plots will be displayed: one showing the initial clusters and the other showing the final clusters.
+5. To run compare_clusters.py to compare the result of k-means vs CURE run the following script. Make sure to replace sample_data.csv, complete_data.csv, and output.csv with your actual file names. Adjust the parameters (3, 5, 0.2) according to your requirements.
+
+```
+python compare_clusters.py sample_data.csv complete_data.csv 3 5 0.2 output.csv
+
+```
+
+6. After running the script, two plots will be displayed: one showing the initial clusters and the other showing the final clusters.
