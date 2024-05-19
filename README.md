@@ -140,7 +140,7 @@ Uses matplotlib to create a scatter plot of the points colored by their assigned
 5. To run compare_clusters.py to compare the result of k-means vs CURE run the following script. Make sure to replace sample_data.csv, complete_data.csv, and output.csv with your actual file names. Adjust the parameters (3, 5, 0.2) according to your requirements.
 
 ```
-python compare_clusters.py sample_data.csv complete_data.csv 3 5 0.2 output.csv
+python compare_clusters.py sample_data.csv complete_data.csv 3 5 0.2 output_cure.csv
 
 ```
 

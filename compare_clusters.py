@@ -23,11 +23,11 @@ def computeCentroid(initialCluster):
 
 def findRepresentativePoints(initialCluster):
     representativePoints = []
-    representativePoints.append(list(initialCluster[0]))
+    representativePoints.append(tuple(initialCluster[0]))  # Convert array to tuple
     for i in range(n - 1):
         maximumDistance = float("-inf")
         for point in initialCluster:
-            if point in representativePoints:
+            if tuple(point) in representativePoints:  # Convert array to tuple
                 continue
             minimumDistance = float("inf")
             for representativePoint in representativePoints:
@@ -37,7 +37,7 @@ def findRepresentativePoints(initialCluster):
             if minimumDistance > maximumDistance:
                 candidateRepresentativePoint = point
                 maximumDistance = minimumDistance
-        representativePoints.append(list(candidateRepresentativePoint))
+        representativePoints.append(tuple(candidateRepresentativePoint))  # Convert array to tuple
     return representativePoints
 
 def getDistance(point1, point2):
