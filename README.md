@@ -18,7 +18,7 @@ Purpose: This function helps in assigning a point to the nearest cluster based o
 
 Computes the centroid (geometric center) of a cluster of points.
 
-def computeCentroid(initialCluster): x = 0 y = 0 for point in initialCluster: x += point[0] y += point[1] numberOfPoints = len(initialCluster) return (x / numberOfPoints, y / numberOfPoints)
+    def computeCentroid(initialCluster): x = 0 y = 0 for point in initialCluster: x += point[0] y += point[1] numberOfPoints = len(initialCluster) return (x / numberOfPoints, y / numberOfPoints)
 
 Purpose: To find the center of a cluster, which is used to shift representative points towards the centroid.
 
