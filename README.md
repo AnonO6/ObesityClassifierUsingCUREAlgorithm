@@ -258,7 +258,7 @@ plt.show()
    cd ObesityClassifierUsingCUREAlgorithm
 ```
 
-2. Install pandas, matplotlib and scikit-learn for k-means clustring in compare_clusters.py
+2. Install pandas, matplotlib and (scikit-learn for k-means clustring in compare_clusters.py)
 
 ```
    pip install pandas
