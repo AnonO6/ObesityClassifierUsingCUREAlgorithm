@@ -65,10 +65,8 @@ def formClusters_heirarchical(sampleData):
         del clusters[c2]
     return clusters
 
-# Main execution
 sampleDataFile = open(sys.argv[1]).readlines()
 completeDataFile = open(sys.argv[2]).readlines()
-
 k = int(sys.argv[3])
 n = int(sys.argv[4])
 p = float(sys.argv[5])
@@ -90,6 +88,13 @@ initialClusters = formClusters_heirarchical(sampleData)
 representativePointsList = []
 representativePoints_shifted = []
 
+# For plotting initial clusters
+initialClusterAssignments = []
+for clusterId, initialCluster in enumerate(initialClusters):
+    for point in initialCluster:
+        initialClusterAssignments.append((point, clusterId))
+
+# Find representative points and shift them
 for initialCluster in initialClusters:
     representivePoints = findRepresentativePoints(initialCluster)
     representativePointsList.append(representivePoints)
@@ -111,18 +116,27 @@ for point in completeData:
             clusterId = clusterNum
     outputPointList.append((point, clusterId))
 
-# Write the output to the file
 w = open(outputFileName, 'w')
 for point in outputPointList:
     w.write(str(point[0][0]) + "," + str(point[0][1]) + "," + str(point[1]) + "\n")
 w.close()
 
-# Plot the results
+# Plot initial clusters
 colors = plt.cm.get_cmap("tab10", k)
-for point, clusterId in outputPointList:
+plt.figure(figsize=(12, 6))
+plt.subplot(1, 2, 1)
+for point, clusterId in initialClusterAssignments:
     plt.scatter(point[0], point[1], color=colors(clusterId))
-
 plt.xlabel('X')
 plt.ylabel('Y')
-plt.title('CURE Clustering Result')
+plt.title('Initial Clusters')
+
+# Plot final clusters
+plt.subplot(1, 2, 2)
+for point, clusterId in outputPointList:
+    plt.scatter(point[0], point[1], color=colors(clusterId))
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Final CURE Clusters')
+
 plt.show()
