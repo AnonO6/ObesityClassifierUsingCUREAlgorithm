@@ -112,8 +112,8 @@ Uses matplotlib to create a scatter plot of the points colored by their assigned
 1. Clone the repo
 
 ```
-   git clone https://github.com/your_username/your_project.git
-   cd your_project
+   git clone https://github.com/AnonO6/ObesityClassifierUsingCUREAlgorithm.git
+   cd ObesityClassifierUsingCUREAlgorithm
 ```
 
 2. Install pandas and matplotlib
@@ -132,7 +132,7 @@ Uses matplotlib to create a scatter plot of the points colored by their assigned
 4. Open the cure_algorithm_with_plots.py script and update the parameters as needed (e.g., number of clusters, sample size). Run the script:
 
 ```
-   python cure_algorithm_with_plots.py sample_data.csv complete_data.csv 3 5 0.2 output.csv
+   python Clustering_CURE.py sample_data.csv complete_data.csv 3 5 0.2 output.csv
 ```
 
 Replace sample_data.csv, complete_data.csv, and output.csv with your actual file names.
