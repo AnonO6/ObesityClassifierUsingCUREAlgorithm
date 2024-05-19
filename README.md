@@ -129,11 +129,11 @@ Uses matplotlib to create a scatter plot of the points colored by their assigned
    python generate_sample_data.py
 ```
 
-4. Open the cure_algorithm_with_plots.py script and update the parameters as needed (e.g., number of clusters, sample size). Run the script:
+4. Open the cure_algorithm_with_plots.py script and update the parameters as needed (e.g., number of clusters, sample size). Run the script below, replace sample_data.csv, complete_data.csv, and output.csv with your actual file names.
+   Adjust the parameters (3, 5, 0.2) according to your requirements.
 
 ```
    python Clustering_CURE.py sample_data.csv complete_data.csv 3 5 0.2 output.csv
 ```
 
-Replace sample_data.csv, complete_data.csv, and output.csv with your actual file names.
-Adjust the parameters (3, 5, 0.2) according to your requirements. 5. After running the script, two plots will be displayed: one showing the initial clusters and the other showing the final clusters.
+5. After running the script, two plots will be displayed: one showing the initial clusters and the other showing the final clusters.
